@@ -1,0 +1,16 @@
+[project]
+name = "reddit-sentiment-agent"
+version = "0.1.0"
+description = "CS410 Reddit product sentiment ReAct agent API"
+requires-python = ">=3.11"
+dependencies = ["fastapi>=0.115,<1", "uvicorn[standard]>=0.30,<1", "langchain>=1,<2", "langchain-openai>=1,<2", "pydantic-settings>=2,<3"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "httpx>=0.27,<1"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
